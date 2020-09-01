@@ -2,6 +2,7 @@
 
 
 .test {
+    grid-column: 1 / span 4;
     font-family: $primary-font;
     font-size: 4rem;
 }
