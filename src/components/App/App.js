@@ -1,6 +1,6 @@
 import React from 'react';
-import LandingPage from '../components/LandingPage/LandingPage';
-import './App.scss';
+import LandingPage from '../LandingPage/LandingPage';
+import '../App/App.scss';
 
 const App = () => {
   return (

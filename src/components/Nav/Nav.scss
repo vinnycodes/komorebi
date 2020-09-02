@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.nav {
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 1;
+    align-self: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        font-size: 3rem;
+        font-family: $primary-font;
+        font-weight: 100;
+        letter-spacing: .4rem;
+
+    }
+
+    &__container {}
+
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.6rem;
+        letter-spacing: .05rem;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+}

@@ -1,8 +1,108 @@
 @import '../../styles/variables';
 
 
-.test {
-    grid-column: 1 / span 4;
-    font-family: $primary-font;
+.landingPage {
+    grid-column: 1 / span 12;
+    background-color: $primary-color-black;
     font-size: 4rem;
+    color: white;
+
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: $full-grid-column-template;
+    grid-column-gap: $full-grid-column-gap-template;
+    grid-template-rows: repeat(6, 160px);
+
+
+    &__center {
+        grid-column: 4 / span 3;
+        grid-row: 3 / span 2;
+
+        // Komorebi at the center of the landing page
+        h1 {
+            font-size: 7rem;
+            font-family: $primary-font;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+
+        // Authenttic Japanese
+        h3 {
+            font-size: 2.5rem;
+            font-family: $primary-font;
+            font-weight: 100;
+            padding-left: 1rem;
+            margin-bottom: 6rem;
+        }
+
+        // Menu link at center of the landing page
+        h4 {
+            display: inline-block;
+            font-size: 2rem;
+            font-family: $primary-font;
+            font-weight: 100;
+            padding-left: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    // Image To The Right of the Center Wording
+    &__imageOne {
+        grid-column: 7 / span 3;
+        grid-row: 2;
+        height: 70vh;
+        width: 100%;
+        padding-right: 5rem;
+
+        &--picture {
+            height: 90%;
+            width: 100%;
+            object-fit: cover;
+            filter: grayscale(1);
+            border-radius: 15px;
+        }
+    }
+
+    // Image Taking Up Far Right Portion of the screen
+    &__imageTwo {
+        grid-column: 10 / span 3;
+        // grid-row: 1 / span 6;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
+        &--picture {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // Social List Container at the bottom of the landing page
+    &__social {
+        grid-column: 2 / 10;
+        grid-row: 6 / span 1;
+        align-items: center;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // Social List  at the bottom of the landing page
+    &__socialList {
+        display: flex;
+
+        // SECONDARY Social List Containing Address
+        // &--secondary {}
+    }
+
+    // Social List ITEMS at the bottom of the landing page
+    &__socialItems {
+        list-style: none;
+        font-size: 1.5rem;
+        font-family: $primary-font;
+        margin-right: 5rem;
+    }
+
 }

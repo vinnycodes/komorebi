@@ -1,14 +1,56 @@
 @font-face {
-    font-family: 'made_saonararegular';
-    src: url('/komorebi/public/made_saonara_personal_use-webfont.woff2') format('woff2'),
-        url('/komorebi/public/made_saonara_personal_use-webfont.woff') format('woff');
+    font-family: 'MADE SAONARA';
+    src: url('./fonts/MADESAONARA.woff2') format('woff2'),
+        url('./fonts/MADESAONARA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    // font-display: swap;
+}
+
+@font-face {
+    font-family: 'future_pt_light';
+    src: url('./fonts/FuturaPTLight.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'future_pt_book';
+    src: url('./fonts/FuturaPTBook.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
 
-$primary-font: 'made_saonararegular',
+@font-face {
+    font-family: 'future_pt_medium';
+    src: url('./fonts/FuturaPTMedium.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//GRID TEMPLATE VARIABLES
+$full-grid-column-template: repeat(12, 1fr);
+$full-grid-column-gap-template: 20px;
+
+// FONT VARIABLES
+$primary-font: 'MADE SAONARA',
+'future_pt_light',
 sans-serif;
+
+$secondary-font: 'future_pt_light',
+'future_pt_book',
+sans-serif;
+
+$tertiary-font: 'future_pt_medium',
+'future_pt_book',
+sans-serif;
+
+// COLOR VARIABLES 
+$primary-color-blue: #73ADCE;
+$primary-color-black: #1D2123;
+$primary-color-middleRed: #DC7F62;
+$primary-color-darkBlue: #0A3376;
+$primary-color-beige: #EBEBD3;
 
 
 $borderTest: 1px solid red;

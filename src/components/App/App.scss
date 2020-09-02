@@ -1,6 +1,8 @@
-@import '../styles/variables';
+@import '../../styles/variables';
 
 .App {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: $full-grid-column-template;
+    // grid-template-rows: repeat(6 1fr);
+    // grid-column-gap: $full-grid-column-gap-template;
 }
