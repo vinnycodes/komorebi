@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.homePage {
+    grid-column: 1 / span 12;
+
+    display: grid;
+    grid-template-columns: $full-grid-column-template;
+    grid-column-gap: $full-grid-column-gap-template;
+}

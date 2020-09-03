@@ -1,11 +1,11 @@
 import React from 'react';
-import LandingPage from '../LandingPage/LandingPage';
 import '../App/App.scss';
+import HomePage from '../HomePage/HomePage';
 
 const App = () => {
   return (
     <div className="App">
-      <LandingPage />
+      <HomePage />
     </div>
   );
 };

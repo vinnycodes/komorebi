@@ -1,0 +1,102 @@
+@import '../../styles/variables';
+
+.reservation {
+    width: 100vw;
+    height: 100vh;
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        height: 50vh;
+        width: 60vw;
+        justify-content: space-between;
+    }
+
+    &__words {
+        width: 30%;
+
+        h1 {
+            font-size: 8rem;
+            font-family: $primary-font;
+
+            &:last-of-type {
+                margin-bottom: 5rem;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+
+            &:not(:last-child) {
+                margin-bottom: 3.5rem;
+            }
+        }
+    }
+
+    &__formContainer {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding: 5rem;
+
+        background-color: $primary-color-black;
+        color: white;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        height: 100%;
+
+        input {
+            font-size: 1.5rem;
+            height: 3rem;
+            width: 75%;
+            border-width: 0px 0px 2px 0px;
+            border-radius: 2px;
+            border-color: white;
+            background-color: inherit;
+            color: white;
+            border-style: solid;
+
+
+            &::placeholder {
+                color: white;
+            }
+
+            &[type=submit] {
+                grid-column: 2 / span 1;
+                border: 1px solid white;
+                height: 4rem;
+                cursor: pointer;
+                background: linear-gradient(to right, $primary-color-black 0%, $primary-color-black 90%, $primary-color-middleRed 90%);
+                transition: .2s all ease-in-out;
+
+                &:hover {
+                    border-color: $primary-color-beige;
+                    background: none;
+                    background-color: $primary-color-blue;
+                }
+            }
+
+            &:focus {
+                outline-style: none;
+            }
+        }
+    }
+
+    &__hours {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+
+        font-family: $primary-font;
+        font-size: 1.3rem;
+        color: white;
+    }
+}
