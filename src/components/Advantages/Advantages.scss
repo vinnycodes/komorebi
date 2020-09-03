@@ -1,0 +1,86 @@
+@import '../../styles/variables';
+
+.advantages {
+    grid-column: 1 / -1;
+
+    height: 90vh;
+
+    display: grid;
+    grid-template-columns: $full-grid-column-template;
+    // grid-column-gap: $full-grid-column-gap-template;
+    grid-template-rows: repeat(2, 1fr);
+
+
+    &__wordBlock {
+        background-color: $primary-color-black;
+        color: white;
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        &--one,
+        &--three {
+            padding: 5rem;
+            line-height: 2.5rem;
+        }
+
+        &--one {
+            grid-column: 1/ span 4;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            p {
+                width: 40%;
+            }
+        }
+
+        &--two {
+            grid-column: 5 / span 4;
+            grid-row: 2 / span 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.5rem;
+            font-family: $primary-font;
+        }
+
+        &--three {
+            grid-column: 9 / span 4;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+
+    &__imgBlock {
+        width: 100%;
+        object-fit: contain;
+
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &--one {
+            grid-column: 1/ span 4;
+            grid-row: 2 / span 1;
+        }
+
+        &--two {
+            grid-row: 1 / span 1;
+            grid-column: 5 / span 4;
+        }
+
+        &--three {
+            grid-column: 9 / span 4;
+            grid-row: 2 / span 1;
+        }
+    }
+}
