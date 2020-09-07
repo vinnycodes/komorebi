@@ -3,16 +3,30 @@ import './Advantages.scss';
 import PlatingPic from '../../media/imgs/plating.jpg';
 import ChefPic from '../../media/imgs/sushi-chef.jpg';
 import TablePic from '../../media/imgs/restaurantOne.jpg';
+import GrayArrow from '../../media/icons/gray_arrow.svg';
 
 const Advantages = () => {
   return (
     <div className="advantages">
       <div className="advantages__wordBlock advantages__wordBlock--one">
         <p>
-          Varied Japanese cuisine <br /> Competitive prices
+          Varied Japanese cuisine{' '}
+          <img
+            src={GrayArrow}
+            alt=""
+            className="advantages__grayArrow advantages__grayArrow--one"
+          />
+          <br /> Competitive prices
         </p>
 
-        <p>Regular workshops from the chef</p>
+        <p>
+          Regular workshops from the chef
+          <img
+            src={GrayArrow}
+            alt=""
+            className="advantages__grayArrow advantages__grayArrow--two"
+          />
+        </p>
       </div>
 
       <div className="advantages__imgBlock advantages__imgBlock--one">
@@ -31,7 +45,14 @@ const Advantages = () => {
 
       <div className="advantages__wordBlock advantages__wordBlock--three">
         <p>Unique atmosphere and style</p>
-        <p>Event capability</p>
+        <p>
+          Event capability <br />
+          <img
+            src={GrayArrow}
+            alt=""
+            className="advantages__grayArrow advantages__grayArrow--two"
+          />
+        </p>
       </div>
     </div>
   );
