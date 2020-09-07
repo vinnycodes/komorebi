@@ -3,6 +3,7 @@ import './HomePage.scss';
 import LandingPage from '../LandingPage/LandingPage';
 import Reservation from '../Reservation/Reservation';
 import Advantages from '../Advantages/Advantages';
+import Menu from '../Menu/Menu';
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
       <LandingPage />
       <Reservation />
       <Advantages />
+      <Menu />
     </div>
   );
 };
