@@ -8,4 +8,34 @@
     align-items: center;
 
     height: 100vh;
+
+    &__container {
+        height: 80vh;
+        width: 70vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: $borderTest;
+    }
+
+    &__title {}
+
+    &__list {}
+
+    &__listItem {
+        list-style: none;
+    }
+
+    &__picContainer {
+        height: 16rem;
+        width: 16rem;
+    }
+
+    &__picture {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
 }
