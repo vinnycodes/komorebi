@@ -4,6 +4,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import Reservation from '../Reservation/Reservation';
 import Advantages from '../Advantages/Advantages';
 import Menu from '../Menu/Menu';
+import CookingLessonAd from '../CookingLessonAd/CookingLessonAd';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Reservation />
       <Advantages />
       <Menu />
+      <CookingLessonAd />
     </div>
   );
 };
