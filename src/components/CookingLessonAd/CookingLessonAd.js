@@ -6,7 +6,7 @@ const CookingLessonAd = () => {
   return (
     <div className="cookingAd">
       <h1 className="cookingAd__title">
-        Cooking <br /> Lesson
+        Cooking <br /> lesson
       </h1>
       <p className="cookingAd__description">
         If you want to understand the essence of Italian cuisine, we invite you

@@ -1,0 +1,73 @@
+@import '../../styles/variables';
+
+
+.reserveAd {
+    grid-column: 1 / -1;
+
+    height: 80vh;
+
+    display: grid;
+    grid-template-columns: $full-grid-column-template;
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: $full-grid-column-gap-template;
+
+    &__reserve {
+        grid-column: 3 / span 4;
+        grid-row: 3 / span 4;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button {
+            background-color: white;
+            padding: 1rem 3rem;
+            border: 2px solid black;
+            outline-style: none;
+            cursor: pointer;
+        }
+
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 100;
+            letter-spacing: .5rem;
+        }
+    }
+
+    &__title {
+        font-size: 5.7rem;
+        font-weight: 100;
+    }
+
+    &__img {
+        grid-column: 7 / span 5;
+        grid-row: 3 / span 4;
+
+        height: 100%;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__days,
+    &__address {
+        font-size: 1.7rem;
+        font-weight: 300;
+        margin-top: 2rem;
+    }
+
+    &__days {
+        grid-column: 3 / span 6;
+        grid-row: 7 / span 1;
+    }
+
+    &__address {
+        grid-column: 7 / span 4;
+        grid-row: 7 / span 1;
+    }
+}

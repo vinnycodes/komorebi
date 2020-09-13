@@ -5,6 +5,7 @@ import Reservation from '../Reservation/Reservation';
 import Advantages from '../Advantages/Advantages';
 import Menu from '../Menu/Menu';
 import CookingLessonAd from '../CookingLessonAd/CookingLessonAd';
+import ReserveAd from '../ReserveAd/ReserveAd';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Advantages />
       <Menu />
       <CookingLessonAd />
+      <ReserveAd />
     </div>
   );
 };
