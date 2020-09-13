@@ -5,8 +5,8 @@
     grid-column: 1/ -1;
 
     height: 50vh;
-    background-color: $primary-color-black;
-    // background-color: black;
+    // background-color: $primary-color-black;
+    background-color: black;
     color: white;
 
     display: grid;
@@ -45,13 +45,13 @@
         border-radius: 15px;
 
         background-image: linear-gradient(to right bottom,
-                rgba($primary-color-black, 0.5),
-                rgba($primary-color-black, 0.5)),
+                rgba(black, 0.5),
+                rgba(black, 0.5)),
             url('../../media/imgs/cookingLesson.jpg');
         background-size: cover;
         background-position: top;
-        box-shadow: 0 0 8px 8px $primary-color-black inset;
-        background-color: $primary-color-black;
+        box-shadow: 0 0 8px 8px black inset;
+        background-color: black;
     }
 
 }

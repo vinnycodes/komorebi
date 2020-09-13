@@ -6,6 +6,7 @@ import Advantages from '../Advantages/Advantages';
 import Menu from '../Menu/Menu';
 import CookingLessonAd from '../CookingLessonAd/CookingLessonAd';
 import ReserveAd from '../ReserveAd/ReserveAd';
+import Footer from '../Footer/Footer';
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Menu />
       <CookingLessonAd />
       <ReserveAd />
+      <Footer />
     </div>
   );
 };

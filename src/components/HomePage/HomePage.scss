@@ -6,4 +6,12 @@
     display: grid;
     grid-template-columns: $full-grid-column-template;
     grid-column-gap: $full-grid-column-gap-template;
+
+    a,
+    a:visited,
+    a:link {
+        color: inherit;
+        outline-style: none;
+        text-decoration: none;
+    }
 }
