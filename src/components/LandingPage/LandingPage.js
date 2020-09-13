@@ -28,15 +28,49 @@ const LandingPage = () => {
         <h1>Komorebi</h1>
         <h3>Authentic Japanese</h3>
 
-        <h4>Menu</h4>
+        <h4>
+          <a href="#menu">Menu</a>
+        </h4>
       </div>
 
       <div className="landingPage__social">
         <ul className="landingPage__socialList">
-          <li className="landingPage__socialItems">Instagram</li>
-          <li className="landingPage__socialItems">Facebook</li>
-          <li className="landingPage__socialItems">Youtube</li>
-          <li className="landingPage__socialItems">Pinterest</li>
+          <li className="landingPage__socialItems">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+          </li>
+          <li className="landingPage__socialItems">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+          </li>
+          <li className="landingPage__socialItems">
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Youtube
+            </a>
+          </li>
+          <li className="landingPage__socialItems">
+            <a
+              href="https://www.pinterest.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pinterest
+            </a>
+          </li>
         </ul>
         <ul className="landingPage__socialList landingPage__socialList--secondary">
           <li className="landingPage__socialItems">

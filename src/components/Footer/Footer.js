@@ -4,7 +4,9 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer__logo">KOMOREBI</div>
+      <div className="footer__logo">
+        <a href="#">KOMOREBI</a>
+      </div>
 
       <div className="footer__lists">
         <ul className="footer__socials">
@@ -53,9 +55,15 @@ const Footer = () => {
         </ul>
 
         <ul className="footer__nav">
-          <li>Menu</li>
-          <li>Cooking Lesson</li>
-          <li>Reservation</li>
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+          <li>
+            <a href="#cookingAd">Cooking Lesson</a>
+          </li>
+          <li>
+            <a href="#reservation">Reservation</a>
+          </li>
         </ul>
 
         <ul className="footer__webdetails">

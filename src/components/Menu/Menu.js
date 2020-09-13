@@ -161,7 +161,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="menu">
+    <div className="menu" id="menu">
       <div className="menu__container">
         <ul className="menu__list">
           <h1 className="menu__title">Menu</h1>

@@ -4,7 +4,7 @@ import CookingLessonImg from '../../media/imgs/cookingLesson.jpg';
 
 const CookingLessonAd = () => {
   return (
-    <div className="cookingAd">
+    <div className="cookingAd" id="cookingAd">
       <h1 className="cookingAd__title">
         Cooking <br /> lesson
       </h1>
