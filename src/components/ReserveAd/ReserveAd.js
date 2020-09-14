@@ -11,7 +11,9 @@ const ReserveAd = () => {
           <br />
           on the site now
           <br />
-          <button>Reservation</button>
+          <button>
+            <a href="#reservation">Reservation</a>
+          </button>
         </div>
         <h1>910 473-9010</h1>
       </div>

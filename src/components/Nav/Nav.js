@@ -10,7 +10,6 @@ const Nav = () => {
           <li className="nav__item">Contact</li>
           <li className="nav__item">9104739010</li>
           <li className="nav__item">
-            {' '}
             <a href="#reservation">Reservation</a>
           </li>
         </ul>
