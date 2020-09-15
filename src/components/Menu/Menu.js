@@ -165,6 +165,7 @@ const Menu = () => {
     menuPagination(foodMenu[menu])
   );
   const [page, setPage] = useState(0);
+  const [menuAnimation, setMenuAnimation] = useState('fadeIn 1s ease-in-out');
 
   useEffect(() => {
     // Create Arrays for Pagination and set to Menu Choices State
@@ -172,6 +173,9 @@ const Menu = () => {
 
     // Reset Page for Pagination to 0
     setPage(0);
+
+    //Set Menu Animation to Fade In
+    setMenuAnimation('fadeIn 1s ease-in-out');
   }, [menu]);
 
   // Set Limits to Pagination. 0 at lowest and menuChoices length at highest
@@ -187,8 +191,16 @@ const Menu = () => {
   }, [page]);
 
   const MenuItems = (props) => {
+    const itemStyle = () => {
+      if (props.item === menu) {
+        return 'menu__listItem menu__listItem--selected';
+      }
+
+      return 'menu__listItem';
+    };
+
     return (
-      <li className="menu__listItem" onClick={() => setMenu(props.item)}>
+      <li className={itemStyle()} onClick={() => setMenu(props.item)}>
         {props.item}
       </li>
     );
@@ -204,7 +216,11 @@ const Menu = () => {
       }
 
       return (
-        <div className="menu__item" key={item.name}>
+        <div
+          className="menu__item"
+          key={item.name}
+          style={{ animation: menuAnimation }}
+        >
           <div className="menu__itemDescription">
             <h3>{item.name}</h3>
             <h5>{item.amount}</h5>
@@ -236,11 +252,17 @@ const Menu = () => {
         <div className="menu__arrows">
           <LeftArrow
             className="menu__arrow"
-            onClick={() => setPage(page - 1)}
+            onClick={() => {
+              setPage(page - 1);
+              setMenuAnimation('moveInLeft 1s ease-in-out');
+            }}
           />
           <RightArrow
             className="menu__arrow"
-            onClick={() => setPage(page + 1)}
+            onClick={() => {
+              setPage(page + 1);
+              setMenuAnimation('moveInRight 1s ease-in-out');
+            }}
           />
         </div>
       </div>

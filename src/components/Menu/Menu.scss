@@ -1,5 +1,48 @@
 @import '../../styles/variables';
 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .menu {
     grid-column: 1 / -1;
 
@@ -13,21 +56,18 @@
         height: 60vh;
         width: 60vw;
 
-        // display: flex;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 5vh;
         justify-content: center;
         align-items: center;
         padding: 5rem 0rem 5rem 5rem;
-        // border: $borderTest;
     }
 
 
     &__list {
         height: 100%;
         grid-row: 1 / span 2;
-        // border: $borderTest;
 
         display: flex;
         flex-direction: column;
@@ -42,8 +82,18 @@
     &__listItem {
         list-style: none;
         cursor: pointer;
-
         font-size: 1.4rem;
+        color: $color-grey-dark-2;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: black;
+        }
+
+        &--selected {
+            color: black;
+            text-decoration: underline;
+        }
     }
 
     &__picContainer {
@@ -64,12 +114,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 4rem;
-        // border: $borderTest;
     }
 
     &__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        // animation: moveInRight 1s ease-in-out;
     }
 
     &__itemDescription {
