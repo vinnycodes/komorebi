@@ -119,7 +119,6 @@
     &__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        // animation: moveInRight 1s ease-in-out;
     }
 
     &__itemDescription {
@@ -155,7 +154,6 @@
         grid-row: 3 / span 1;
         grid-column: 3 / span 1;
         text-align: center;
-        // justify-self: flex-end;
     }
 
     &__arrow {

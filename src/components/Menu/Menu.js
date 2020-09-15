@@ -39,14 +39,106 @@ const foodMenu = {
     },
   },
   'Soup & Salads': {
-    1: { name: 'Miso Soup', price: 3, amount: 'Cup/Bowl', pic: 'pic' },
-    2: { name: 'Wonton Soup', price: 4, amount: 'Cup/Bowl', pic: 'pic' },
-    3: { name: 'Mini Pho Soup', price: 5, amount: 'Cup/Bowl', pic: 'pic' },
-    4: { name: 'Mini Ramen Soup', price: 5, amount: 'Cup/Bowl', pic: 'pic' },
-    5: { name: 'House Salad', price: 3, amount: 'Cup/Bowl', pic: 'pic' },
-    6: { name: 'Seaweed Salad', price: 4, amount: 'Cup/Bowl', pic: 'pic' },
+    1: { name: 'Miso Soup', price: 3, amount: 'Cup/Bowl', pic: menuPics.miso },
+    2: {
+      name: 'Wonton Soup',
+      price: 4,
+      amount: 'Cup/Bowl',
+      pic: menuPics.wonton,
+    },
+    3: {
+      name: 'Mini Pho Soup',
+      price: 5,
+      amount: 'Cup/Bowl',
+      pic: menuPics.pho,
+    },
+    4: {
+      name: 'Mini Ramen Soup',
+      price: 5,
+      amount: 'Cup/Bowl',
+      pic: menuPics.ramen,
+    },
+    5: {
+      name: 'House Salad',
+      price: 3,
+      amount: 'Cup/Bowl',
+      pic: menuPics.houseSalad,
+    },
+    6: {
+      name: 'Seaweed Salad',
+      price: 4,
+      amount: 'Cup/Bowl',
+      pic: menuPics.seaweedSalad,
+    },
   },
-  Sushi: {},
+  Sushi: {
+    1: {
+      name: 'AAC Roll',
+      price: 5,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_3,
+    },
+    2: {
+      name: 'C Roll',
+      price: 5.5,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_4,
+    },
+    3: {
+      name: 'California',
+      price: 5.25,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_1,
+    },
+    4: {
+      name: 'Crunch Crab',
+      price: 5.5,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_6,
+    },
+    5: {
+      name: 'Eel Avocado Roll',
+      price: 5.5,
+      amount: '5 Pieces',
+      pic: menuPics.sushi_8,
+    },
+    6: {
+      name: 'Spicy Salmon',
+      price: 5.95,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_3,
+    },
+    7: {
+      name: 'Spicy Tuna',
+      price: 5.95,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_2,
+    },
+    8: {
+      name: 'Japan Roll',
+      price: 7.25,
+      amount: '4 Pieces',
+      pic: menuPics.sushi_7,
+    },
+    9: {
+      name: 'Moon Roll',
+      price: 6.25,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_5,
+    },
+    10: {
+      name: 'Pearl Roll',
+      price: 5.5,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_9,
+    },
+    11: {
+      name: 'Oshinko Roll',
+      price: 4,
+      amount: '6 Pieces',
+      pic: menuPics.sushi_11,
+    },
+  },
   'Specialty Rolls': {
     1: {
       name: 'Alaskan',
@@ -137,10 +229,8 @@ const foodMenu = {
     1: { name: 'House Fried Rice', price: 7, amount: 'Entree', pic: 'pic' },
     2: { name: 'House Lo Mein', price: 6.5, amount: 'Entree', pic: 'pic' },
     3: { name: 'Pad Thai', price: 8.25, amount: 'Entree', pic: 'pic' },
-    4: { name: 'Pad See Eew', price: 8, amount: 'Entree', pic: 'pic' },
+    4: { name: 'Pad See Ew', price: 8, amount: 'Entree', pic: 'pic' },
   },
-  Drinks: {},
-  Dessert: {},
 };
 
 const menuPagination = (obj) => {

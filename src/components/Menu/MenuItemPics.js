@@ -10,9 +10,22 @@ import springRollImg from '../../media/menu/apps/spring_roll.jpg';
 import misoImg from '../../media/menu/soups&salads/miso_soup.jpg';
 import wontonImg from '../../media/menu/soups&salads/wonton.jpg';
 import phoImg from '../../media/menu/soups&salads/pho.jpg';
-import ramneImg from '../../media/menu/soups&salads/ramen.jpg';
+import ramenImg from '../../media/menu/soups&salads/ramen.jpg';
 import houseSaladImg from '../../media/menu/soups&salads/asian_salad.jpg';
 import seaweedSaladImg from '../../media/menu/soups&salads/seaweed_salad.jpg';
+
+// Sushi
+import sushi_1 from '../../media/menu/sushi/sushi-1.jpg';
+import sushi_2 from '../../media/menu/sushi/sushi-2.jpg';
+import sushi_3 from '../../media/menu/sushi/sushi-3.jpg';
+import sushi_4 from '../../media/menu/sushi/sushi-4.jpg';
+import sushi_5 from '../../media/menu/sushi/sushi-5.jpg';
+import sushi_6 from '../../media/menu/sushi/sushi-6.jpg';
+import sushi_7 from '../../media/menu/sushi/sushi-7.jpg';
+import sushi_8 from '../../media/menu/sushi/sushi-8.jpg';
+import sushi_9 from '../../media/menu/sushi/sushi-9.jpg';
+import sushi_10 from '../../media/menu/sushi/sushi-10.jpg';
+import sushi_11 from '../../media/menu/sushi/sushi-11.jpg';
 
 // Specialty Rolls
 import specialtyRoll_1_Imgs from '../../media/menu/specialtyRolls/specialtyRoll-1.jpg';
@@ -30,12 +43,6 @@ import specialtyRoll_12_Imgs from '../../media/menu/specialtyRolls/specialtyRoll
 import specialtyRoll_13_Imgs from '../../media/menu/specialtyRolls/specialtyRoll-13.jpg';
 import specialtyRoll_14_Imgs from '../../media/menu/specialtyRolls/specialtyRoll-14.jpg';
 
-const apps = '../../media/menu/apps';
-// const riceNoodles = '../../media/menu/rice&nooodles';
-const soupsSalads = '../../media/menu/soups&salads';
-// const specialtyRolls = '../../media/menu/specialtyRolls';
-// const sushi = '../../media/menu/sushi';
-
 export const menuPics = {
   // Appetizers
   crabRangoon: crabRangoonImg,
@@ -49,9 +56,22 @@ export const menuPics = {
   miso: misoImg,
   wonton: wontonImg,
   pho: phoImg,
-  ramne: ramneImg,
+  ramen: ramenImg,
   houseSalad: houseSaladImg,
   seaweedSalad: seaweedSaladImg,
+
+  // Sushi Rolls
+  sushi_1: sushi_1,
+  sushi_2: sushi_2,
+  sushi_3: sushi_3,
+  sushi_4: sushi_4,
+  sushi_5: sushi_5,
+  sushi_6: sushi_6,
+  sushi_7: sushi_7,
+  sushi_8: sushi_8,
+  sushi_9: sushi_9,
+  sushi_10: sushi_10,
+  sushi_11: sushi_11,
 
   // Speciality Rolls
   specialtyRoll_1: specialtyRoll_1_Imgs,
@@ -70,4 +90,4 @@ export const menuPics = {
   specialtyRoll_14: specialtyRoll_14_Imgs,
 };
 
-// export default menuPics;
+export default menuPics;
