@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.scss';
 import { menuPics } from './MenuItemPics';
+import { ReactComponent as LeftArrow } from '../../media/icons/leftArrow.svg';
+import { ReactComponent as RightArrow } from '../../media/icons/rightArrow.svg';
 
 const foodMenu = {
   Appetizers: {
@@ -141,16 +143,48 @@ const foodMenu = {
   Dessert: {},
 };
 
+const menuPagination = (obj) => {
+  let paginatedMenu = [];
+
+  for (let item of Object.entries(obj)) {
+    const last = paginatedMenu[paginatedMenu.length - 1];
+
+    if (!last || last.length === 4) {
+      paginatedMenu.push([item[1]]);
+    } else {
+      last.push(item[1]);
+    }
+  }
+
+  return paginatedMenu;
+};
+
 const Menu = () => {
   const [menu, setMenu] = useState('Appetizers');
-  const [menuChoices, setMenuChoices] = useState(foodMenu[menu]);
+  const [menuChoices, setMenuChoices] = useState(
+    menuPagination(foodMenu[menu])
+  );
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
-    setMenuChoices(foodMenu[menu]);
+    // Create Arrays for Pagination and set to Menu Choices State
+    setMenuChoices(menuPagination(foodMenu[menu]));
 
-    // console.log(foodMenu['Sushi'][1]);
-    // console.log(menuPics);
+    // Reset Page for Pagination to 0
+    setPage(0);
   }, [menu]);
+
+  // Set Limits to Pagination. 0 at lowest and menuChoices length at highest
+  // Creating a menu carousel effect controlled by arrows at the bottom
+  useEffect(() => {
+    if (page < 0) {
+      return setPage(menuChoices.length - 1);
+    }
+
+    if (page >= menuChoices.length) {
+      return setPage(0);
+    }
+  }, [page]);
 
   const MenuItems = (props) => {
     return (
@@ -158,6 +192,30 @@ const Menu = () => {
         {props.item}
       </li>
     );
+  };
+
+  const currentMenu = () => {
+    if (!menuChoices[page]) {
+      return <div>No Items Currently </div>;
+    }
+    return menuChoices[page].map((item) => {
+      if (!item) {
+        return <div>No Items Currently </div>;
+      }
+
+      return (
+        <div className="menu__item" key={item.name}>
+          <div className="menu__itemDescription"></div>
+          <h3>{item.name}</h3>
+          <h5>{item.amount}</h5>
+
+          <h4>{item.price}</h4>
+          <div className="menu__picContainer">
+            <img className="menu__picture" src={item.pic} alt={item.name} />
+          </div>
+        </div>
+      );
+    });
   };
 
   return (
@@ -173,23 +231,18 @@ const Menu = () => {
         </ul>
 
         <div className="menu__gallery">
-          {Object.keys(menuChoices).map((item, i) => {
-            return (
-              <div key={i}>
-                <h3>{menuChoices[item].name}</h3>
-                <h5>{menuChoices[item].amount}</h5>
+          {currentMenu()}
 
-                <h4>{menuChoices[item].price}</h4>
-                <div className="menu__picContainer">
-                  <img
-                    className="menu__picture"
-                    src={menuChoices[item].pic}
-                    alt={menuChoices[item].name}
-                  />
-                </div>
-              </div>
-            );
-          })}
+          <div className="">
+            <LeftArrow
+              className="menu__arrow"
+              onClick={() => setPage(page - 1)}
+            />
+            <RightArrow
+              className="menu__arrow"
+              onClick={() => setPage(page + 1)}
+            />
+          </div>
         </div>
       </div>
     </div>
