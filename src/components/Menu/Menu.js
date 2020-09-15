@@ -226,10 +226,30 @@ const foodMenu = {
     },
   },
   'Rice & Noodles': {
-    1: { name: 'House Fried Rice', price: 7, amount: 'Entree', pic: 'pic' },
-    2: { name: 'House Lo Mein', price: 6.5, amount: 'Entree', pic: 'pic' },
-    3: { name: 'Pad Thai', price: 8.25, amount: 'Entree', pic: 'pic' },
-    4: { name: 'Pad See Ew', price: 8, amount: 'Entree', pic: 'pic' },
+    1: {
+      name: 'House Fried Rice',
+      price: 7,
+      amount: 'Entree',
+      pic: menuPics.riceAndNoodles_1,
+    },
+    2: {
+      name: 'House Lo Mein',
+      price: 6.5,
+      amount: 'Entree',
+      pic: menuPics.riceAndNoodles_2,
+    },
+    3: {
+      name: 'Pad Thai',
+      price: 8.25,
+      amount: 'Entree',
+      pic: menuPics.riceAndNoodles_3,
+    },
+    4: {
+      name: 'Pad See Ew',
+      price: 8,
+      amount: 'Entree',
+      pic: menuPics.riceAndNoodles_4,
+    },
   },
 };
 

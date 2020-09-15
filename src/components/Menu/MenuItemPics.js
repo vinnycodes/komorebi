@@ -43,6 +43,12 @@ import specialtyRoll_12_Imgs from '../../media/menu/specialtyRolls/specialtyRoll
 import specialtyRoll_13_Imgs from '../../media/menu/specialtyRolls/specialtyRoll-13.jpg';
 import specialtyRoll_14_Imgs from '../../media/menu/specialtyRolls/specialtyRoll-14.jpg';
 
+// Rice And Noodles
+import riceAndNoodles_1 from '../../media/menu/rice&noodles/Pad See Ew.jpg';
+import riceAndNoodles_2 from '../../media/menu/rice&noodles/House Fried Rice.jpg';
+import riceAndNoodles_3 from '../../media/menu/rice&noodles/House Lo Mein.jpg';
+import riceAndNoodles_4 from '../../media/menu/rice&noodles/Pad Thai.jpg';
+
 export const menuPics = {
   // Appetizers
   crabRangoon: crabRangoonImg,
@@ -88,6 +94,12 @@ export const menuPics = {
   specialtyRoll_12: specialtyRoll_12_Imgs,
   specialtyRoll_13: specialtyRoll_13_Imgs,
   specialtyRoll_14: specialtyRoll_14_Imgs,
+
+  // Rice & Noodles
+  riceAndNoodles_1: riceAndNoodles_1,
+  riceAndNoodles_2: riceAndNoodles_2,
+  riceAndNoodles_3: riceAndNoodles_3,
+  riceAndNoodles_4: riceAndNoodles_4,
 };
 
 export default menuPics;
