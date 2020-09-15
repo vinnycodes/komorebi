@@ -205,11 +205,12 @@ const Menu = () => {
 
       return (
         <div className="menu__item" key={item.name}>
-          <div className="menu__itemDescription"></div>
-          <h3>{item.name}</h3>
-          <h5>{item.amount}</h5>
+          <div className="menu__itemDescription">
+            <h3>{item.name}</h3>
+            <h5>{item.amount}</h5>
+            <h4>{item.price.toFixed(2)}</h4>
+          </div>
 
-          <h4>{item.price}</h4>
           <div className="menu__picContainer">
             <img className="menu__picture" src={item.pic} alt={item.name} />
           </div>
@@ -230,19 +231,17 @@ const Menu = () => {
           <MenuItems item="Rice & Noodles" />
         </ul>
 
-        <div className="menu__gallery">
-          {currentMenu()}
+        <div className="menu__gallery">{currentMenu()}</div>
 
-          <div className="">
-            <LeftArrow
-              className="menu__arrow"
-              onClick={() => setPage(page - 1)}
-            />
-            <RightArrow
-              className="menu__arrow"
-              onClick={() => setPage(page + 1)}
-            />
-          </div>
+        <div className="menu__arrows">
+          <LeftArrow
+            className="menu__arrow"
+            onClick={() => setPage(page - 1)}
+          />
+          <RightArrow
+            className="menu__arrow"
+            onClick={() => setPage(page + 1)}
+          />
         </div>
       </div>
     </div>

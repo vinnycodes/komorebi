@@ -10,23 +10,40 @@
     height: 100vh;
 
     &__container {
-        height: 80vh;
-        width: 70vw;
+        height: 60vh;
+        width: 60vw;
 
-        display: flex;
+        // display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 5vh;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-        border: $borderTest;
+        padding: 5rem 0rem 5rem 5rem;
+        // border: $borderTest;
     }
 
-    &__title {}
 
-    &__list {}
+    &__list {
+        height: 100%;
+        grid-row: 1 / span 2;
+        // border: $borderTest;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__title {
+        font-size: 7rem;
+        font-family: $primary-font;
+    }
 
     &__listItem {
         list-style: none;
         cursor: pointer;
+
+        font-size: 1.4rem;
     }
 
     &__picContainer {
@@ -41,24 +58,54 @@
     }
 
     &__gallery {
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 2;
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 3rem;
+        grid-gap: 4rem;
         // border: $borderTest;
     }
 
     &__item {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 
     &__itemDescription {
         grid-column: 2 / span 1;
+        grid-row: 1 / -1;
+        align-self: flex-end;
+        font-family: $primary-font;
+        margin-left: 1.5rem;
+
+        h3 {
+            font-size: 1.7rem;
+        }
+
+        h4 {
+            font-size: 1.9rem;
+        }
+
+        h5 {
+            color: $color-grey-dark;
+            font-size: 1.5rem;
+        }
     }
 
     &__picContainer {
         grid-column: 1 / span 1;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    &__arrows {
+        grid-row: 3 / span 1;
+        grid-column: 3 / span 1;
+        text-align: center;
+        // justify-self: flex-end;
     }
 
     &__arrow {
