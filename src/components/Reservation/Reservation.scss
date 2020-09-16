@@ -1,5 +1,15 @@
 @import '../../styles/variables';
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .reservation {
     width: 100vw;
     height: 100vh;
@@ -94,6 +104,7 @@
         text-align: center;
         height: 100%;
         font-family: $primary-font;
+        animation: fadeIn 1s ease-in;
 
         svg {
             height: 15rem;
