@@ -12,7 +12,7 @@ const LandingPage = () => {
       <div className="landingPage__imageOne">
         <img
           src={sushiMainOne}
-          alt=""
+          alt="platting"
           className="landingPage__imageOne--picture"
         />
       </div>

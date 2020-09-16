@@ -28,8 +28,11 @@
     font-style: normal;
 }
 
+// -----------------------
 //GRID TEMPLATE VARIABLES
+// -----------------------
 $full-grid-column-template: repeat(12, 1fr);
+$full-grid-column-template-2: repeat(10, 1fr);
 $full-grid-column-gap-template: 20px;
 
 // FONT VARIABLES
@@ -62,3 +65,9 @@ $color-grey-dark-3: #333;
 
 
 $borderTest: 1px solid red;
+
+// -----------------------
+// MEDIA QUERY BREAKPOINTS (x / 16 = bp) 
+// -----------------------
+$bp-xxl: 104.2rem; //1667px
+$bp-xl: 71.31rem // 1141px
