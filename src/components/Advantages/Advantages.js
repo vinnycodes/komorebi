@@ -50,7 +50,7 @@ const Advantages = () => {
           <img
             src={GrayArrow}
             alt=""
-            className="advantages__grayArrow advantages__grayArrow--two"
+            className="advantages__grayArrow advantages__grayArrow--three"
           />
         </p>
       </div>

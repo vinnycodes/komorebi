@@ -24,10 +24,26 @@
         height: 50vh;
         width: 60vw;
         justify-content: space-between;
+
+        @media only screen and (max-width: $bp-xxl) {
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $bp-xl) {
+            width: 90%;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+        }
     }
 
     &__words {
         width: 30%;
+
+        @media only screen and (max-width: $bp-xl) {
+            width: 100%;
+            text-align: center;
+        }
 
         h1 {
             font-size: 8rem;
@@ -55,6 +71,12 @@
 
         background-color: $primary-color-black;
         color: white;
+
+        @media only screen and (max-width: $bp-xl) {
+            width: 100%;
+            height: 50vh;
+            align-content: center;
+        }
     }
 
     &__form {
@@ -73,6 +95,10 @@
             background-color: inherit;
             color: white;
             border-style: solid;
+
+            @media only screen and (max-width: $bp-xl) {
+                width: 90%;
+            }
 
 
             &::placeholder {
@@ -133,5 +159,9 @@
         font-family: $primary-font;
         font-size: 1.3rem;
         color: white;
+
+        @media only screen and (max-width: $bp-xl) {
+            width: 90%;
+        }
     }
 }
