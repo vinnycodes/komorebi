@@ -11,6 +11,10 @@
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: $full-grid-column-gap-template;
 
+    @media only screen and (max-width: $bp-xl) {
+        padding: 0 5rem;
+    }
+
     &__reserve {
         grid-column: 3 / span 4;
         grid-row: 3 / span 4;
@@ -18,6 +22,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @media only screen and (max-width: $bp-xl) {
+            grid-column: 1 / span 5;
+        }
 
         button {
             background-color: white;
@@ -29,15 +37,24 @@
 
 
         h1 {
-            font-size: 6rem;
+            font-size: 5.5rem;
             font-weight: 100;
             letter-spacing: .5rem;
+            margin-right: 1rem;
+
+            @media only screen and (max-width: $bp-xl) {
+                font-size: 3.5rem;
+            }
         }
     }
 
     &__title {
         font-size: 5.7rem;
         font-weight: 100;
+
+        @media only screen and (max-width: $bp-xl) {
+            font-size: 4rem;
+        }
     }
 
     &__img {
@@ -64,6 +81,10 @@
     &__days {
         grid-column: 3 / span 6;
         grid-row: 7 / span 1;
+
+        @media only screen and (max-width: $bp-xl) {
+            grid-column: 1 / span 6;
+        }
     }
 
     &__address {

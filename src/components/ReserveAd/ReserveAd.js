@@ -15,7 +15,7 @@ const ReserveAd = () => {
             <a href="#reservation">Reservation</a>
           </button>
         </div>
-        <h1>910 473-9010</h1>
+        <h1>910 473 9010</h1>
       </div>
       <div className="reserveAd__img">
         <img src={Chef} alt="restaurant plating" />

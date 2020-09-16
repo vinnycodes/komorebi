@@ -9,8 +9,8 @@ const CookingLessonAd = () => {
         Cooking <br /> lesson
       </h1>
       <p className="cookingAd__description">
-        If you want to understand the essence of Italian cuisine, we invite you
-        to professional master classes from one of the best Moscow chefs.
+        If you want to understand the essence of Japanese cuisine, we invite you
+        to professional master classes from one of the best authentic chefs.
         <br />
         <br />
         Here you will learn the basics of cooking, plunge into the culture of
