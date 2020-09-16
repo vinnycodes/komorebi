@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Reservation.scss';
+import { ReactComponent as VerifiedSubmission } from '../../media/icons/verified.svg';
 
 const Reservation = () => {
-  const [date, setDate] = useState();
-  const [people, setPeople] = useState();
+  const [date, setDate] = useState('');
+  const [people, setPeople] = useState(0);
   const [name, setName] = useState('');
   const [specialWishes, setSpecialWishes] = useState('');
-  const [phone, setPhone] = useState('');
-  const [time, setTime] = useState('');
+  const [submit, setSubmit] = useState(false);
 
   // Control Amount of People for Reservation
   useEffect(() => {
@@ -20,6 +20,95 @@ const Reservation = () => {
       return setPeople(21);
     }
   }, [people]);
+
+  const reservationForm = () => {
+    if (submit) {
+      return (
+        <div className="reservation__formContainer">
+          <div className="reservation__verifiedSubmission">
+            <VerifiedSubmission />
+            <br />
+            <h1>See You Soon</h1>
+            <br />
+            <p>Please contact us directly for any pertinent questions</p>
+            <p>9104739010</p>
+            <p>info@komorebi.com</p>
+            <br />
+            <h3>Wednesday - Sunday: 12pm - 12am </h3>
+            <br />
+            <h3>Wilmington, NC 4724 New Centre Dr</h3>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="reservation__formContainer">
+        <form action="" className="reservation__form">
+          <input
+            type="date"
+            min="2020-010-15"
+            max="2021-2-20"
+            required
+            name="date"
+            placeholder="Date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+          <input type="time" name="time" placeholder="Time" required />
+          <input
+            type="number"
+            name="quantity"
+            placeholder={'How many people?'}
+            min="12:00"
+            max="24:00"
+            required
+            value={people}
+            onChange={(e) => setPeople(e.target.value)}
+          />
+          <input
+            type="text"
+            name="wishes"
+            placeholder="Special Wishes"
+            required
+            value={specialWishes}
+            onChange={(e) => setSpecialWishes(e.target.value)}
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone"
+            required
+            pattern="[0-9]{10}"
+          />
+          <input
+            type="submit"
+            value="Reservation"
+            onClick={(e) => handelSubmit(e)}
+          />
+        </form>
+        <div className="reservation__hours">
+          <h4>Wednesday - Sunday: 12pm - 12am </h4>
+          <h4>Wilmington, NC 4724 New Centre Dr</h4>
+        </div>
+      </div>
+    );
+  };
+
+  const handelSubmit = (e) => {
+    e.preventDefault();
+
+    if (date && people && name && specialWishes) {
+      setSubmit(true);
+    }
+  };
 
   return (
     <div className="reservation" id="reservation">
@@ -44,59 +133,8 @@ const Reservation = () => {
 
           <p>Reserve a table and spend time with pleasure!</p>
         </div>
-        <div className="reservation__formContainer">
-          <form action="" className="reservation__form">
-            <input
-              type="date"
-              min="2020-010-15"
-              max="2021-2-20"
-              required
-              name="date"
-              placeholder="Date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
-            <input type="time" name="time" placeholder="Time" required />
-            <input
-              type="number"
-              name="quantity"
-              placeholder={'How many people?'}
-              min="12:00"
-              max="24:00"
-              required
-              value={people}
-              onChange={(e) => setPeople(e.target.value)}
-            />
-            <input
-              type="text"
-              name="wishes"
-              placeholder="Special Wishes"
-              required
-              value={specialWishes}
-              onChange={(e) => setSpecialWishes(e.target.value)}
-            />
-            <input
-              type="text"
-              name="name"
-              placeholder="Your name"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Your Phone"
-              required
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-            />
-            <input type="submit" value="Reservation" />
-          </form>
-          <div className="reservation__hours">
-            <h4>Tuesday - Sunday: 12pm - 10pm </h4>
-            <h4>Wilmington, NC 4724 New Centre Dr</h4>
-          </div>
-        </div>
+
+        {reservationForm()}
       </div>
     </div>
   );
