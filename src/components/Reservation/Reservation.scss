@@ -51,6 +51,14 @@
 
             &:last-of-type {
                 margin-bottom: 5rem;
+
+                @media only screen and (max-width: $bp-phone-2) {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            @media only screen and (max-width: $bp-phone-2) {
+                font-size: 7rem;
             }
         }
 

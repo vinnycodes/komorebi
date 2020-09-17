@@ -71,12 +71,18 @@
             grid-template-rows: 10vh 1fr 5vh;
             justify-content: center;
             min-width: 90%;
+            min-height: 65%;
             padding: 5rem;
+        }
+
+        @media only screen and (max-width:$bp-large) {
+            min-height: 50%;
         }
 
         @media only screen and (max-width:$bp-medium) {
             grid-template-rows: 15vh 2fr 5vh;
             padding: 5rem;
+            min-height: 90%;
             height: 100vh;
         }
     }
@@ -102,6 +108,11 @@
             flex-wrap: wrap;
             margin-bottom: 10rem;
         }
+
+        @media only screen and (max-width:$bp-phone-1) {
+            justify-content: center;
+        }
+
     }
 
     &__title {
@@ -120,6 +131,13 @@
         font-size: 1.4rem;
         color: $color-grey-dark-2;
         transition: all .2s ease-in-out;
+
+        @media only screen and (max-width:$bp-phone-1) {
+
+            &:not(:last-of-type) {
+                margin-right: 1.5rem;
+            }
+        }
 
         &:hover {
             color: black;
@@ -158,6 +176,8 @@
         @media only screen and (max-width: $bp-medium) {
             grid-template-columns: repeat(1, 1fr);
         }
+
+        @media only screen and (max-width: $bp-phone-1) {}
 
     }
 
