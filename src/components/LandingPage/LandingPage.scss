@@ -6,7 +6,6 @@
     background-color: $primary-color-black;
     font-size: 4rem;
     color: white;
-
     height: 100vh;
 
     display: grid;
@@ -14,6 +13,9 @@
     grid-column-gap: $full-grid-column-gap-template;
     grid-template-rows: repeat(6, 160px);
 
+    @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+        grid-template-rows: repeat(6, 130px);
+    }
 
     &__center {
         grid-column: 4 / span 3;
@@ -28,6 +30,10 @@
             padding-top: 5rem;
         }
 
+        @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+            grid-row: 2 / span 2;
+        }
+
         // Komorebi at the center of the landing page
         h1 {
             font-size: 7rem;
@@ -38,6 +44,11 @@
             @media only screen and (max-width:$bp-phone-3) {
                 font-size: 6rem;
             }
+
+            @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+                font-size: 6rem;
+                margin-top: 2rem;
+            }
         }
 
         // Authenttic Japanese
@@ -47,6 +58,11 @@
             font-weight: 100;
             padding-left: 1rem;
             margin-bottom: 6rem;
+
+            @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+                margin-bottom: 4rem;
+                font-size: 2rem;
+            }
         }
 
         // Menu link at center of the landing page
@@ -57,6 +73,10 @@
             font-weight: 100;
             padding-left: 1rem;
             cursor: pointer;
+
+            @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+                font-size: 1.8rem;
+            }
         }
     }
 
@@ -135,11 +155,19 @@
             grid-column: 2 / span 8;
         }
 
+        @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+            grid-row: 3 / span 1;
+        }
+
     }
 
     // Social List  at the bottom of the landing page
     &__socialList {
         display: flex;
+
+        @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+            display: none;
+        }
 
         // SECONDARY Social List Containing Address
         &--secondary {

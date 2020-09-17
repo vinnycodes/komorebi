@@ -56,6 +56,10 @@
         height: 125vh;
     }
 
+    @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+        height: 150vh;
+    }
+
     &__container {
         height: 60vh;
         min-width: 60vw;
@@ -84,6 +88,12 @@
             padding: 5rem;
             min-height: 90%;
             height: 100vh;
+        }
+
+        @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+            min-height: 70%;
+            min-width: 90%;
+            height: 130vh;
         }
     }
 
@@ -157,6 +167,11 @@
             height: 10rem;
             width: 10rem;
         }
+
+        @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation:landscape) {
+            height: 10rem;
+            width: 10rem;
+        }
     }
 
     &__picture {
@@ -182,7 +197,9 @@
             grid-template-columns: repeat(1, 1fr);
         }
 
-        @media only screen and (max-width: $bp-phone-1) {}
+        @media only screen and (max-width: $bp-small-mobile-portrait) and (orientation: landscape) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
     }
 

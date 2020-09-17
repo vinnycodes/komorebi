@@ -16,4 +16,8 @@ html {
     @media only screen and (max-width: $bp-phone-1) {
         font-size: 50%;
     }
+
+    @media only screen and (max-width: $bp-large) and (orientation: landscape) {
+        font-size: 50%;
+    }
 }

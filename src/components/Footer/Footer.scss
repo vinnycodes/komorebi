@@ -25,6 +25,14 @@
         padding: 5rem 1rem;
     }
 
+    @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+        height: 80vh;
+    }
+
+    @media only screen and (max-width: $bp-small-mobile-portrait) and (orientation: landscape) {
+        height: 100vh;
+    }
+
     &__logo {
         grid-column: 1 / span 2;
 

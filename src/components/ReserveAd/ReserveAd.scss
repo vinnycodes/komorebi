@@ -23,6 +23,14 @@
         padding: 5rem;
     }
 
+    @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
+        height: 100vh;
+    }
+
+    @media only screen and (max-width: $bp-small-mobile-portrait) and (orientation: landscape) {
+        height: 180vh;
+    }
+
     &__reserve {
         grid-column: 3 / span 4;
         grid-row: 3 / span 4;
