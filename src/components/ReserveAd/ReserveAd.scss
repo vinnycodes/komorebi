@@ -19,6 +19,10 @@
         height: 100vh;
     }
 
+    @media only screen and (max-width: $bp-phone-3) {
+        padding: 5rem;
+    }
+
     &__reserve {
         grid-column: 3 / span 4;
         grid-row: 3 / span 4;
@@ -29,6 +33,10 @@
 
         @media only screen and (max-width: $bp-xl) {
             grid-column: 1 / span 5;
+        }
+
+        @media only screen and (max-width:$bp-phone-3) {
+            grid-row: 1 / span 4;
         }
 
         button {
@@ -74,6 +82,10 @@
 
         @media only screen and (max-width: $bp-phone-1) {
             width: 150%;
+        }
+
+        @media only screen and (max-width: $bp-phone-3) {
+            grid-row: 1 / span 4;
         }
 
         img {

@@ -34,6 +34,10 @@
             font-family: $primary-font;
             font-weight: 100;
             text-transform: uppercase;
+
+            @media only screen and (max-width:$bp-phone-3) {
+                font-size: 6rem;
+            }
         }
 
         // Authenttic Japanese
@@ -124,7 +128,11 @@
 
         @media only screen and (max-width:$bp-phone-2) {
             grid-row: 4 / span 1;
-            // grid-column: 2 / span 10;
+        }
+
+        @media only screen and (max-width:$bp-phone-3) {
+            justify-content: initial;
+            grid-column: 2 / span 8;
         }
 
     }
@@ -149,6 +157,11 @@
         font-size: 1.5rem;
         font-family: $primary-font;
         margin-right: 5rem;
+
+        @media only screen and (max-width:$bp-phone-3) {
+            margin-right: 3rem;
+            margin-bottom: 2rem;
+        }
     }
 
 }

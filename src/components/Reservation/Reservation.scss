@@ -19,6 +19,10 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width:$bp-phone-3) {
+        height: 125vh;
+    }
+
     &__container {
         display: flex;
         height: 50vh;
