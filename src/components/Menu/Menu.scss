@@ -53,7 +53,7 @@
     height: 100vh;
 
     @media only screen and (max-width:$bp-large) {
-        height: 125vh;
+        height: 135vh;
     }
 
     @media only screen and (max-width: $bp-large-mobile-portrait) and (orientation: landscape) {
@@ -187,10 +187,13 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 4rem;
+        width: 50vw;
+        margin-bottom: 2rem;
 
         @media only screen and (max-width:$bp-xl) {
             grid-column: 1 / -1;
             grid-row: 2 / span 1;
+            width: 60vw;
         }
 
         @media only screen and (max-width: $bp-medium) {
